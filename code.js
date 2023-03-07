@@ -112,9 +112,17 @@ function playRound()
     
 }
 
+function game()
+{
+    replay = prompt("How many rounds?");
+    for (let i = 0; i < replay; i++) {
+        playRound();
+        
+    }
+}
+
 let playerChoice;
 let computerChoice;
+let replay;
 
-playRound();
-
-
+game();

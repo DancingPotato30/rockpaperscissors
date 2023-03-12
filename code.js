@@ -155,13 +155,24 @@ let botPoints = 0;
 let playerPoints = 0;
 let newRound;
 
-const finalContainer = document.querySelector(".containerForFinal");
-const results = document.querySelector(".results");
+//Sounds
+const hoverSound = new Audio('./sounds/hover.wav');
+
+//Buttons
+const allButtons = document.querySelectorAll("button");
 const replayBtn = document.createElement("button");
 const buttons = document.querySelectorAll(".playBtn");
 const finalResult = document.querySelector(".final");
+
+//Containers
+const finalContainer = document.querySelector(".containerForFinal");
+const results = document.querySelector(".results");
+
+//Scores
 const computerScore = document.querySelector(".computerScore");
 const playerScore = document.querySelector(".playerScore");
+
+//Player options
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
@@ -173,10 +184,16 @@ replayBtn.className = "replayBtn";
 playerScore.textContent = `${playerPoints}`;
 computerScore.textContent = `${botPoints}`;
 
+rock.addEventListener('mouseover', () => hoverSound.play());
+
+paper.addEventListener('mouseover', () => hoverSound.play());
+
+scissors.addEventListener('mouseover', () => hoverSound.play());
+
 
 rock.addEventListener('click', (e) => {
     playerChoice = "rock";
-        playRound(playerChoice);
+    playRound(playerChoice);
 
 });
 
@@ -192,5 +209,9 @@ scissors.addEventListener('click', (e) => {
         playRound(playerChoice);
 
 });
+
+
+
+
 
 

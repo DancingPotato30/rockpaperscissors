@@ -1,9 +1,14 @@
+
+
 body{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    flex-shrink: 1;
+    background-image: url(./images/background1.png);
+    background-repeat: no-repeat;
 }
 
 .game{
@@ -13,16 +18,23 @@ body{
     border: solid;
     height: 50vh;
     justify-content: space-evenly;
+    flex-shrink: 1;
+    padding: 10px;
 }
 
 button{
     font-size: 20px;
+    background-color: transparent;
+    border: none;
 }
 
 .title{
-    font-size: 40px;
+    font-size: 100px;
     font-weight: bold;
     font-family: Quicksand;
+    display: flex;
+    justify-content: flex-start;
+    border: solid;
 }
 
 .buttons{
